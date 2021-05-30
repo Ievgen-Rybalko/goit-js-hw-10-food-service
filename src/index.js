@@ -1,13 +1,21 @@
 import './sass/main.scss';
 import dishesMenu from './templates/menu.json';
-// import templateMenu from './templates/menu-card.hbs';
+import templateMenu from './templates/menu-card.hbs';
 
-// const markupGeneration = templateMenu(dishesMenu);
 
-// console.log(dishesMenu);
+function createMenuMarkup(dishes) {
+    return dishes.map(templateMenu).join('');
+}
 
-// const menuElements = document.querySelector('.js-menu');
-// menuElements.insertAdjacentHTML('beforeend', markupGeneration);
+const markupGeneration = createMenuMarkup(dishesMenu);
+
+
+console.log(markupGeneration);
+
+console.log(dishesMenu);
+
+const menuElements = document.querySelector('.js-menu');
+menuElements.insertAdjacentHTML('beforeend', markupGeneration);
 
 
 const Theme = {
