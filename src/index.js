@@ -10,9 +10,9 @@ function createMenuMarkup(dishes) {
 const markupGeneration = createMenuMarkup(dishesMenu);
 
 
-console.log(markupGeneration);
+// console.log(markupGeneration);
 
-console.log(dishesMenu);
+// console.log(dishesMenu);
 
 const menuElements = document.querySelector('.js-menu');
 menuElements.insertAdjacentHTML('beforeend', markupGeneration);
